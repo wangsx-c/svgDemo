@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>circle</title>
+    <style>
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+            overflow: hidden;
+            background: white;
+            color: #333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 0px;
+        }
+        .center {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .kcal {
+            position: relative;
+        }
+        .kcal .text {
+            font-size: 14px;
+            color:#fff;
+            position: absolute;
+            top: 26px;
+            left: 43px;
+            width: 40px;
+            text-align: center;
+            margin-left:-20px;
+            z-index: 1;
+        }
+        .kcal svg{
+            position: absolute;
+            top:0px;
+            width: 86px;
+            height:86px;
+            left:0px;
+        }
+        svg .bg {
+            position: absolute;
+            top:0px;
+            left:0px;
+            stroke-width: 6px;
+            stroke: #1B2A33;
+        }
+        svg .progress {
+            position: absolute;
+            top:0px;
+            left:0px;
+            stroke-dasharray: calc(40*2*3.14);
+            stroke-width: 6px;
+            stroke-linecap: round;
+            stroke: #5CE1EC;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            animation: one 1s ease-in-out forwards;
+        }
+        @keyframes one {
+            from {
+                stroke-dashoffset: calc(40*2*3.14);
+            }
+            to {
+                stroke-dashoffset: 20;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="kcal">
+                <svg width="100%" height="100%">
+                    <!--cx=x的坐标，cy=y的坐标，r=半径-->
+                    <circle cx="43" cy="43" r="40" class="progress" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
