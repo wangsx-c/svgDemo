@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            iframe {
+                border: none;
+                width: 400px;
+                height: 400px;
+            }
+            div {
+                position: relative;
+                display: inline-block;
+            }
+            .circle::before {
+                content: '圆环：';
+                position: absolute;
+                top: 50%;
+            }
+            .line::before {
+                content: '直线：';
+                position: absolute;
+                top: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle">
+            <iframe src="./progress/circle.html"></iframe>
+        </div>
+        <div class="line">
+            <iframe src="./progress/line.html"></iframe>
+        </div>
+    </body>
+</html>

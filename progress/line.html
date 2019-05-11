@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>circle</title>
+    <style>
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+            overflow: hidden;
+            background: white;
+            color: #333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 0px;
+        }
+        svg{
+            position: absolute;
+            top:50%;
+            left:50%;
+            width: 200px;
+            margin-left:-100px;
+            height:200px;
+        }
+        svg .progress {
+            position: absolute;
+            top:0px;
+            left:0px;
+            stroke-dasharray: 210;
+            stroke-width: 12px;
+            stroke-linecap: round;
+            stroke: #5CE1EC;
+            animation: one 1s ease-in-out forwards;
+        }
+        @keyframes one {
+            from {
+                stroke-dashoffset: 200;
+            }
+            to {
+                stroke-dashoffset: 20;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <svg width="100%" height="100%">
+                    <line x1="10" y1="10" x2="180" y2="10" class="progress"/>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
